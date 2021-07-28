@@ -1,0 +1,98 @@
+:root {
+  --bg-color: #d9b391;
+  --select-color: #f2f2f2;
+  --brand-color: #a65f37;
+  --headline-color: #261105;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Lato", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 600px;
+  margin: 80px auto;
+}
+
+nav {
+  text-align: center;
+  padding: 60px 0;
+}
+
+h1 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 6rem;
+  color: var(--headline-color);
+  padding-bottom: 10px;
+}
+
+.dog-image {
+  display: none;
+  border-radius: 2px;
+  max-width: 600px;
+  max-height: 60vh;
+}
+
+.loading-dog {
+  font-size: 80px;
+  text-align: center;
+  animation: 1s spin linear infinite;
+  display: none;
+  margin: 100px 0;
+}
+
+@keyframes spin {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.show {
+  display: block;
+}
+
+/* dropdown styling */
+select {
+  background-color: var(--select-color);
+  border: none;
+  border-radius: 10px;
+  display: inline-block;
+  font-family: "Lato", sans-serif;
+  line-height: 1.5em;
+  padding: 1em 10em 1em 2em;
+
+  /* reset */
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* arrows */
+select.minimal {
+  background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 23px) calc(1.4em + 2px),
+    calc(100% - 18px) calc(1.4em + 2px), calc(100% - 3.3em) 1em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
+}
+
+select.minimal:focus {
+  border-color: black;
+  outline: 0;
+}
